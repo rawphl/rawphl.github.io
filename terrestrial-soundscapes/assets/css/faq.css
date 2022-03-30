@@ -1,0 +1,90 @@
+body {
+    overflow: hidden;
+}
+
+main {
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+main h1 {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    height: 3em;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin: 2em 1em;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 0 1em 4em 1em;
+    font-size: 1em;
+    display: blocK;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qAndA {
+    position: relative;
+    padding: 1em;
+    transition: all .5s;
+}
+
+.qAndA .collapse {
+    text-align: center;
+    font-size: .5em;
+    color: white;
+    font-weight: bolder;
+    overflow: hidden;
+    width: 1rem;
+    height: 1rem;
+    background: black;
+    position: absolute;
+    border-radius: 20rem;
+}
+
+.question, .answer {
+    box-shadow: rgba(22, 16, 16, 0.52) 1px 1px 3px;
+    padding: .5rem 1rem;
+}
+
+.question {
+    margin-right: 3em;
+    margin-bottom: .5rem;
+    background-color: rgba(194, 224, 248, 0.59);
+    border-radius: 1em 1em 1em 0;
+}
+
+.question:hover {
+    cursor: pointer;
+}
+
+.answer {
+    display: block;
+    background-color: rgba(174,248,172,0.6);
+    margin-left: 3em;
+    position: absolute;
+    transform: translateX(500px);
+    opacity: 0;
+    border-radius: 1em 1em 0 1em;
+    transition: all .5s;
+}
+
+.collapsed {
+    color: black !important;
+    background: white !important;
+    border: 1px solid black;
+}
+
+.hidden {
+    opacity: 100;
+    position: relative;
+    transform: translateX(0px);
+}

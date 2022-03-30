@@ -1,0 +1,40 @@
+h1 {
+    font-size: 1.3em !important;
+    margin: 3em auto;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.description {
+    border-bottom: rgba(97,20,32,0.67) solid 3px;
+}
+
+main h2 {
+    mix-blend-mode: hard-light;
+    color: white;
+    font-family: shippori-mincho-b1, serif;
+    font-weight: normal;
+    font-size: 1em;
+    letter-spacing: 10px;
+    line-height: 2em;
+    transition: all 1500ms;
+}
+
+.description:not(:first-child) {
+    margin: 4em 0;
+}
+
+main p {
+    margin: 0 auto;
+    mix-blend-mode: hard-light;
+    color: white;
+    font-family: shippori-mincho-b1, serif;
+    font-weight: normal;
+    font-size: 1em;
+    letter-spacing: 5px;
+    line-height: 2em;
+    padding: 1em;
+}

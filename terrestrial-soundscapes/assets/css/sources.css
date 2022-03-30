@@ -1,0 +1,25 @@
+h2, p, ul {
+    color: white;
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+h1 {
+    margin-bottom: 4em;
+}
+
+main {
+    padding: 4em;
+}
+
+h2 {
+    margin: 1em 0;
+}
+
+p {
+    margin-bottom: 4em;
+}
+
+ul {
+    list-style: none;
+}

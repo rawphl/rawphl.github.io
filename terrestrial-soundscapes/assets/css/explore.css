@@ -1,0 +1,123 @@
+
+
+.bgImage {
+    filter: blur(10px) grayscale(.4) brightness(.8);
+}
+
+main h1 {
+    position: relative;
+    z-index: 2;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: normal;
+    font-size: 1em;
+    letter-spacing: 10px;
+    line-height: 2em;
+    width: 70%;
+    margin: 2em auto;
+    text-align: center;
+    color: white;
+}
+
+
+.grid {
+    position: relative;
+    width: 85%;
+    margin: 0 auto 5em auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    row-gap: 50px;
+}
+
+.grid .card {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 500px;
+    height: 500px;
+    border-radius: 2em;
+    box-shadow: rgba(22, 16, 16, 0.52) 1px 1px 10px 5px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.card:hover {
+    filter: saturate(1.4) contrast(1.1);
+    box-shadow: rgba(236, 233, 222, 0.7) 1px 1px 10px 7px;
+}
+
+.card:hover .cardImg {
+    transform: scale(1.1) !important;
+    filter: grayscale(0);
+}
+
+.card:hover h2 {
+    opacity: 1;
+}
+
+.grid .card .cardImg {
+    height: 100%;
+    width: 100%;
+    transition: all .7s;
+    filter: grayscale(.3);
+    background-position: center;
+    background-size: cover;
+}
+
+.jungle {
+    background-image: url("../images/soundpacks/jungle-cover.png");
+}
+
+.island {
+    background-image: url("../images/soundpacks/island-cover.png");
+}
+
+.altitude {
+    background-image: url("../images/soundpacks/altitude-cover.png");
+}
+
+.steppe {
+    background-image: url("../images/soundpacks/storm.png");
+}
+
+h2 {
+    opacity: 0;
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: normal;
+    font-size: 1em;
+    letter-spacing: 1em;
+    text-indent: 1em;
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: black;
+    bottom: 0;
+    background: white;
+    padding: 1em;
+    transition: opacity .7s;
+}
+
+
+@media screen and (min-width: 1200px) {
+    main h1 {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .grid {
+        width: 95%;
+    }
+
+    .grid .card {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+
+
+

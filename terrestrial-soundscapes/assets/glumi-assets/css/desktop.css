@@ -1,0 +1,270 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: .5% 17%;
+    border-right: solid white 1px;
+    border-left: solid white 1px;
+    box-shadow: rgba(50, 50, 50, .7) 0 0 15px;
+}
+
+#bg-image {
+    filter: blur(0px);
+    position: fixed;
+    z-index: -3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background: url("../images/clouds.jpg") repeat center;
+}
+
+/*
+#bg-image-2 {
+    filter: blur(100px);
+    position: fixed;
+    z-index: -3;
+    transform: translateX(-100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background: url("/images/seamlessclouds.png") repeat left;
+    animation: clouds_moving2 10s infinite linear;
+    mix-blend-mode: lighten;
+} */
+
+@keyframes clouds_moving1 {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(100%)}
+}
+
+@keyframes clouds_moving2 {
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(120%)}
+}
+
+#unblurred {
+    filter: blur(70px);
+    z-index: -2;
+    padding: 0 20%;
+    width: 60%;
+    height: 100%;
+    background: url("../images/clouds.jpg") center;
+    background-size: cover;
+    position: fixed;
+}
+
+#main-content-wrapper {
+    z-index: -5;
+    overflow: hidden;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .5);
+    z-index: 1;
+    padding: 30px 40px;
+    border-radius: 0 0 1000px / 100px 0;
+    margin-bottom: 50px;
+}
+
+#section-logo {
+    transition: 0.2s ease-in-out;
+    display: inline-block;
+}
+
+#section-logo:hover {
+    filter: contrast(1.4);
+    transform: scale(1.01);
+}
+
+#h1-logo {
+    font-family: "Segoe UI Emoji";
+    font-size: 35px;
+    color: #76AFB1;
+    letter-spacing: 0.7rem;
+    text-shadow: rgba(118, 175, 177, 0.20) 5px 3px 5px;
+}
+
+#p-slogan {
+    display: inline;
+    font-family: "Dubai";
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-left: 65px;
+    color: rgb(0, 0, 0, 60%);
+}
+
+nav {
+    font-size: 19px;
+    font-family: Dubai;
+    width: 450px;
+    position: absolute;
+    margin-top: 20px;
+    top: 0;
+    right: 0;
+    margin-right: 25%;
+    display: block;
+    padding: 30px 0;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    padding-left: 5px;
+    margin-right: 5%;
+    text-decoration: none;
+    color: rgba(34, 34, 34, 0.70);
+    transition: .1s ease-in-out;
+}
+
+li a:hover {
+    font-weight: bold;
+    color: #b17876;
+    border-left: solid 1px #76AFB1;
+}
+.grid {
+    grid-row-gap: 100px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "content-1 content-2"
+        "content-3 content-4";
+}
+
+#content-1 {
+    grid-area: content-1;
+}
+
+#content-2 {
+    grid-area: content-2;
+}
+
+#content-3 {
+    grid-area: content-3;
+}
+
+#content-4 {
+    grid-area: content-4;
+}
+
+main {
+    font-family: Dubai;
+    font-size: 13px;
+    letter-spacing: 0.15rem;
+    color: rgba(34, 34, 34, 0.70);
+}
+
+.main-sections {
+    min-width: 300px;
+    box-shadow: white;
+    position: relative;
+    text-align: center;
+}
+
+#images-container {
+    border: rgba(255, 255, 255, .2) solid 3px;
+    margin: 100px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+    0% {transform: scale(1.0);
+        transform: translateY(-5px)}
+    50% {transform: scale(1.05);
+        transform: translateY(5px)}
+    100% {transform: scale(1.0);
+        transform: translateY(-5px)}
+}
+
+.images {
+    filter: blur(0px);
+    margin: 50px auto;
+    transition: 0.2s ease-in-out;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 100px;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, .3);
+}
+
+.images:hover {
+    transform: scale(1.05);
+}
+
+
+.p-description {
+    font-size: 16px;
+    min-height: 250px;
+    max-height: 250px;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 3px 5px rgb(0, 0, 0, .5);
+    padding: 40px;
+}
+
+.highlighted {
+    font-style: normal;
+    color: #b17876;
+}
+
+#img-band {
+    background-image: url("../images/band.png");
+    background-position-x: 0;
+}
+
+#img-apple {
+    background-image: url("../images/apple.jpg");
+    background-position-x: -50px;
+}
+
+#img-content {
+    background-image: url("../images/content.jpg");
+    background-position-x: -50px;
+}
+
+#img-leap {
+    background-image: url("../images/leap.jpg");
+    background-position-y: -30px;
+}
+
+footer {
+    margin-top: 200px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 1000px 0 0 0 / 100px 0 0 0;
+    font-family: Dubai;
+    font-size: 13px;
+    letter-spacing: 0.15rem;
+}
+
+#section-contact {
+    font-size: 12px;
+    padding: 40px 40px 0 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#section-privacy-copyright {
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 40px;
+}
